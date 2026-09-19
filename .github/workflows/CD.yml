@@ -15,7 +15,6 @@ jobs:
           uses: actions/checkout@v7
 
         - name: Deploy the application using run docker container
-          secrets: inherit
-          run: docker compose up -d
+          run: docker compose up -d --force-recreate
 
 
