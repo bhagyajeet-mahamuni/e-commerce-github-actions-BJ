@@ -26,8 +26,8 @@ jobs:
       # runs-on: self-hosted
       # uses: ./.github/workflows/CD.yml
       steps:
-        - name: clone the code
-          uses: actions/checkout@v7
+        # - name: clone the code
+        #   uses: actions/checkout@v7
 
         - name: Deploy the application using run docker container
           run: docker compose up -d --build --force-recreate
