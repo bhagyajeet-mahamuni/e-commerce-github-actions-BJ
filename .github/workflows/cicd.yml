@@ -21,16 +21,16 @@ jobs:
     Deploy:
       secrets: inherit
       needs: [code, build]
-      uses: ./.github/workflows/CD.yml
+      # uses: ./.github/workflows/CD.yml
       
-      # # runs-on: self-hosted
-      # # uses: ./.github/workflows/CD.yml
-      # steps:
-      #   # - name: clone the code
-      #   #   uses: actions/checkout@v7
+      runs-on: self-hosted
+      uses: ./.github/workflows/CD.yml
+      steps:
+        - name: clone the code
+          uses: actions/checkout@v7
 
-      #   - name: Deploy the application using run docker container
-      #     run: docker compose up -d --build --force-recreate
+        - name: Deploy the application using run docker container
+          run: docker compose up -d --build --force-recreate
 
 
 
