@@ -22,7 +22,7 @@ jobs:
       needs: [code, build]
       runs-on: self-hosted
       #uses: ./.github/workflows/CD.yml
-      #secrets: inherit
+      secrets: inherit
       # runs-on: self-hosted
       # uses: ./.github/workflows/CD.yml
       steps:
