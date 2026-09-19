@@ -19,9 +19,9 @@ jobs:
 
     ## CD continous delivery
     Deploy:
-      runs-on: self-hosted
       needs: [code, build]
-      secrets: inherit
+      runs-on: self-hosted
+      #secrets: inherit
       #runs-on: self-hosted
       #uses: ./.github/workflows/CD.yml
       steps:
