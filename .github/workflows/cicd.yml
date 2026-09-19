@@ -20,13 +20,15 @@ jobs:
     ## CD continous delivery
     Deploy:
       needs: [code, build]
+      secrets: inherit
       runs-on: self-hosted
-      steps:
-        - name: clone the code
-          uses: actions/checkout@v7
+      uses: ./.github/workflows/CD.yml
+      # steps:
+      #   - name: clone the code
+      #     uses: actions/checkout@v7
 
-        - name: Deploy the application using run docker container
-          run: docker compose up -d
+      #   - name: Deploy the application using run docker container
+      #     run: docker compose up -d
 
 
 
