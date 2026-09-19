@@ -24,7 +24,7 @@ jobs:
       #uses: ./.github/workflows/CD.yml
       secrets: inherit
       # runs-on: self-hosted
-      uses: ./.github/workflows/CD.yml
+      # uses: ./.github/workflows/CD.yml
       steps:
         - name: clone the code
           uses: actions/checkout@v7
